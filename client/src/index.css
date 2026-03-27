@@ -1,0 +1,219 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * VacuTech Design System — Industrial Precision Aesthetic
+ * Design Movement: Bauhaus + Modern Industrial
+ * Color: Deep Navy (#0A1628) bg, Steel Blue (#4A7FA5) accent, Chrome Silver (#C8D6E5) highlight
+ * Typography: Bebas Neue (headlines) + Noto Sans KR (body)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.25rem;
+  /* Deep Navy Industrial Palette */
+  --background: oklch(0.12 0.025 240);
+  --foreground: oklch(0.92 0.008 220);
+  --card: oklch(0.16 0.022 240);
+  --card-foreground: oklch(0.92 0.008 220);
+  --popover: oklch(0.16 0.022 240);
+  --popover-foreground: oklch(0.92 0.008 220);
+  /* Steel Blue primary */
+  --primary: oklch(0.55 0.12 230);
+  --primary-foreground: oklch(0.98 0.005 220);
+  --secondary: oklch(0.20 0.020 240);
+  --secondary-foreground: oklch(0.80 0.010 220);
+  --muted: oklch(0.18 0.018 240);
+  --muted-foreground: oklch(0.60 0.015 230);
+  --accent: oklch(0.55 0.12 230);
+  --accent-foreground: oklch(0.98 0.005 220);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.28 0.020 235);
+  --input: oklch(0.22 0.018 240);
+  --ring: oklch(0.55 0.12 230);
+  /* Charts */
+  --chart-1: oklch(0.55 0.12 230);
+  --chart-2: oklch(0.65 0.10 220);
+  --chart-3: oklch(0.45 0.14 240);
+  --chart-4: oklch(0.75 0.08 215);
+  --chart-5: oklch(0.35 0.16 245);
+  /* Sidebar */
+  --sidebar: oklch(0.10 0.022 240);
+  --sidebar-foreground: oklch(0.92 0.008 220);
+  --sidebar-primary: oklch(0.55 0.12 230);
+  --sidebar-primary-foreground: oklch(0.98 0.005 220);
+  --sidebar-accent: oklch(0.18 0.018 240);
+  --sidebar-accent-foreground: oklch(0.92 0.008 220);
+  --sidebar-border: oklch(0.28 0.020 235);
+  --sidebar-ring: oklch(0.55 0.12 230);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Bebas Neue', 'Noto Sans KR', sans-serif;
+    letter-spacing: 0.05em;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Technical line decoration */
+  .tech-line {
+    position: relative;
+  }
+  .tech-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 3rem;
+    height: 1px;
+    background: oklch(0.55 0.12 230);
+    transform: translateY(-50%);
+  }
+
+  /* Industrial card style */
+  .industrial-card {
+    background: oklch(0.16 0.022 240);
+    border: 1px solid oklch(0.28 0.020 235);
+    position: relative;
+    overflow: hidden;
+  }
+  .industrial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, oklch(0.55 0.12 230), transparent);
+  }
+
+  /* Mono number style */
+  .mono-num {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+  }
+}
+
+/* Scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.7s ease-out forwards;
+}
