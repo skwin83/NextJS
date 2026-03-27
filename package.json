@@ -5,7 +5,7 @@
   "license": "MIT",
  "scripts": {
   "dev": "vite --host",
-  "build": "vite build && esbuild api/index.ts --platform=node --bundle --format=esm --outdir=dist",
+  "build": "vite build && esbuild server/index.ts --platform=node --bundle --format=esm --outdir=dist",
   "start": "node dist/index.js"
 },
   "dependencies": {
