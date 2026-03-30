@@ -247,7 +247,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 연락처
               </h4>
               <ul className="space-y-2 text-sm" style={{ color: "oklch(0.60 0.015 230)" }}>
-                <li>📞 02-1234-5678</li>
+                <li>📞 010-7453-0700</li>
                 <li>✉️ info@vacutech.co.kr</li>
                 <li>📍 경기도 화성시 동탄산업단지</li>
                 <li className="mono-num text-xs" style={{ color: "oklch(0.45 0.015 230)" }}>
@@ -264,7 +264,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               color: "oklch(0.45 0.015 230)",
             }}
           >
-            <span>© 2024 VacuTech Co., Ltd. All rights reserved.</span>
+            <span>© 2024 MSKTech Co., Ltd. All rights reserved.</span>
             <span className="mono-num">사업자등록번호: 123-45-67890</span>
           </div>
         </div>
