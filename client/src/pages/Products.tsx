@@ -1,5 +1,5 @@
 /*
- * Products.tsx — VacuTech 제품 페이지
+ * Products.tsx — MSKTech 제품 페이지
  * Industrial Precision Aesthetic: Dark navy bg, steel blue accents
  * Product categories with specs and images
  */
@@ -8,7 +8,7 @@ import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 
-const PUMP_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663482140460/fNkVu5Tg3PJ9iHbksmAfuk/vacuum-pump-KxtCBumyBx8DpNnYFokr8y.webp";
+const PUMP_IMG = "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000";
 const CHAMBER_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663482140460/fNkVu5Tg3PJ9iHbksmAfuk/vacuum-chamber-b9WZaLMxgtppd4t9GEwHLU.webp";
 const VALVE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663482140460/fNkVu5Tg3PJ9iHbksmAfuk/vacuum-valve-APag6GQ4gXX57Xr5SjfbfJ.webp";
 
